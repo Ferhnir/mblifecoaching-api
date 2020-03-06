@@ -1,0 +1,27 @@
+{
+  "name": "mbfitlifecoaching-api",
+  "version": "1.0.0",
+  "description": "REST API for mbfitlifecoaching",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ferhnir/mblifecoaching-api.git"
+  },
+  "author": "Maksymilian Zdunski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ferhnir/mblifecoaching-api/issues"
+  },
+  "homepage": "https://github.com/Ferhnir/mblifecoaching-api#readme"
+}
