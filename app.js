@@ -7,7 +7,7 @@ const tokenRoute = require('./api/routes/jwtToken');
 const contactMeBox = require('./api/routes/messages/contactMe');
 
 const corsOptions = {
-    origin: 'http://localhost:3010',
+    origin: ['https://localhost:3010', 'https://mzdunski.website/'],
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
     methods: 'PUT, POST, DELETE, GET, PATCH',
     allowedHeaders: ["Origin","X-Requested-With","Content-Type","Accept","Authorization","X-Access-Token"]
