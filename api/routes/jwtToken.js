@@ -7,6 +7,9 @@ const checkIfLocal = require('../middlewares/validateLocalReq');
 const validateToken = require('../middlewares/validateToken');
 
 router.get('/request', checkIfLocal, (req, res) => {
+
+    console.log(req.ip);
+
     let token = jwt.sign(
         {
             user: "mailMeBoxForm"
