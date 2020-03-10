@@ -21,6 +21,12 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+app.get('/', (req, res) => {
+  res.status(200).json({
+    server_status: 'online',
+    api_url: 'https://api.mzdunski.website/'
+  });
+});
 app.use('/token', tokenRoute);
 app.use('/contactme', contactMeBox);
 
