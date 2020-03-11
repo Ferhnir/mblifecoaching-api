@@ -18,7 +18,11 @@ router.get('/request', checkIfLocal, (req, res) => {
         });   
 
     res.status(200).json({
-        jwt_token: token
+        jwt_token: token,
+        ip: req.ip,
+        ip_remote: req.headers.host,
+        ip_remote_2: req.connection.remoteAddress,
+        ip_header: req.headers['x-forwarded-for']  
     });
 });
 
