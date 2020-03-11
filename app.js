@@ -3,8 +3,8 @@ var cors = require('cors');
 const app = express();
 require('dotenv/config');
 
-const tokenRoute = require('./api/routes/jwtToken');
-const contactMeBox = require('./api/routes/messages/contactMe');
+const tokenRoute = require('./app/routes/jwtToken');
+const contactMeBox = require('./app/routes/messages/contactMe');
 
 const corsOptions = {
     origin: [
