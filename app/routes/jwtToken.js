@@ -3,7 +3,7 @@ const router = express.Router();
 //SECURE JWT
 const jwt = require('jsonwebtoken');
 
-const checkIfLocal = require('../middlewares/validateLocalReq');
+const checkIfLocal = require('../middlewares/checkIfReqIsLocal');
 const validateToken = require('../middlewares/validateToken');
 
 router.get('/request', checkIfLocal, (req, res) => {
