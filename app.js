@@ -3,7 +3,7 @@ var cors = require('cors');
 const app = express();
 require('dotenv/config');
 
-const tokenRoute = require('./app/routes/jwtToken');
+const tokenRoute = require('./app/routes/Auth/jwtToken');
 const contactMeBox = require('./app/routes/messages/contactMe');
 
 const corsOptions = {
