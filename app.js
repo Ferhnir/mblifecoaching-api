@@ -7,16 +7,10 @@ const tokenRoute = require('./app/routes/Auth/jwtToken');
 const contactMeBox = require('./app/routes/messages/contactMe');
 
 const corsOptions = {
-    origin: [
-      'https://localhost:3010', 
-      'https://mzdunski.website', 
-      'https://mbfitlifecoaching.fitness',
-      'http://mzdunski.website', 
-      'http://mbfitlifecoaching.fitness'
-    ],
+    origin: process.env.APP_ORIGIN_ALLOWED.split(' '),
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
     methods: 'PUT, POST, DELETE, GET, PATCH',
-    allowedHeaders: ["Origin","X-Requested-With","Content-Type","Accept","Authorization","X-Access-Token"]
+    allowedHeaders: process.env.APP_ORIGIN_ALLOWED.split(' ')
   }
 
 app.use(cors(corsOptions));
